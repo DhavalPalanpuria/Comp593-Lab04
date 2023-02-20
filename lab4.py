@@ -6,7 +6,7 @@ def main():
     log_file = get_log_file_path_from_cmd_line()
     records = filter_log_by_regex(log_file, 'sshd', print_summary=True, print_records=True)
 
-# TODO: Step 3
+# Step 3
 def get_log_file_path_from_cmd_line():
     num_params = len(sys.argv)-1
     if num_params >= 1:
@@ -20,7 +20,7 @@ def get_log_file_path_from_cmd_line():
         print("Error: Log file not found!")
         sys.exit(1)
 
-# TODO: Steps 4-7
+# Steps 4-7
 def filter_log_by_regex(log_file, regex, ignore_case=True, print_summary=False, print_records=False):
     """Gets a list of records in a log file that match a specified regex.
 
